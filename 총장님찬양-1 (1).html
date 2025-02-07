@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>총장님 찬양하기</title>
+    <style>
+        /* 전체 페이지 스타일 */
+        body {
+            display: flex; /* Flexbox 사용 */
+            flex-direction: column; /* 세로 방향으로 정렬 */
+            justify-content: center; /* 세로 중앙 정렬 */
+            align-items: center; /* 가로 중앙 정렬 */
+            height: 100vh; /* 전체 화면 높이 */
+            margin: 0; /* 기본 여백 제거 */
+            background-color: black; /* 배경 색을 검정색으로 설정 */
+            color: white; /* 글자 색을 흰색으로 설정 */
+        }
+        /* 버튼 스타일 */
+        button {
+            margin-top: 20px; /* 버튼과 사진 사이의 간격 */
+            padding: 10px 20px; /* 버튼 패딩 */
+            font-size: 16px; /* 글자 크기 */
+            background-color: gray; /* 버튼 배경 색 */
+            border: none; /* 테두리 없음 */
+            border-radius: 5px; /* 둥근 모서리 */
+            cursor: pointer; /* 마우스 포인터 변경 */
+        }
+        button:hover {
+            background-color: darkgray; /* 호버 시 색상 변경 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 사진을 넣을 수 있는 공간 -->
+    <div id="photo-container">
+        <img src="https://cdn.news.unn.net/news/photo/202301/540255_346384_619.jpg" alt="총장님 사진" style="max-width: auto; height: auto;"/> <!-- 여기에 이미지 URL을 넣으세요 -->
+    </div>
+
+    <!-- 버튼 -->
+    <button id="praise-button">총장님 찬양하기</button>
+
+    <script>
+        // 버튼 클릭 시 배경 색상 변경 함수
+        document.getElementById('praise-button').addEventListener('click', function() {
+            document.body.style.backgroundColor = "#FF0000"; // 배경 색을 진한 빨강색으로 변경
+            setTimeout(function() {
+                document.body.style.backgroundColor = "#000000"; // 1초 후 배경 색을 다시 검정색으로 변경
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
